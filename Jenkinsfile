@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Compile the .cpp file using a shell script
                 build 'PES1UG21CS330-1'
-                sh 'g++ hello.cpp -o output'
+                sh 'g++ main/hello.cpp -o output'
             }
         }
         stage('Test') {
