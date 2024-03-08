@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Print output of .cpp file using a shell script
-                sh './output'
+                sh './0utput'
             }
         }
         stage('Deploy') {
