@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Compile the .cpp file using a shell script
+                build 'PES1UG21CS330'
                 sh 'g++ -o output hello.cpp'
             }
         }
@@ -17,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Placeholder for deployment step
-                echo 'Deployment not implemented'
+                echo 'Deploy'
             }
         }
     }
