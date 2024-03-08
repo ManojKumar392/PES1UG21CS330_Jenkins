@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Compile the .cpp file using a shell script
                 build 'PES1UG21CS330-1'
-                sh 'g++ -o output hello.cpp'
+                sh 'g++ hello.cpp -o output'
             }
         }
         stage('Test') {
@@ -24,7 +24,7 @@ pipeline {
     }
     
     post {
-        always {
+        failure {
             // Display 'pipeline failed' in case of any errors within the pipeline
             echo 'Pipeline failed'
         }
